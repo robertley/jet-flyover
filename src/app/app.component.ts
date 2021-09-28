@@ -42,11 +42,11 @@ export class AppComponent implements OnInit, AfterViewInit {
       options: ["start=111", "end=126"]
     },
   ]
-  jetToSend = 5;
+  jetToSend = -1;
   src: SafeUrl;
 
   ngOnInit() {
-    let i = this.jetToSend != null ? this.jetToSend : Math.floor(Math.random()*this.jetts.length);
+    let i = this.jetToSend != -1 ? this.jetToSend : Math.floor(Math.random()*this.jetts.length);
     let jet = this.jetts[i];
     let src = jet.url + "?autoplay=1&mute=0";
     
