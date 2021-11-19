@@ -1,0 +1,12 @@
+<div *ngIf="playvideo">
+    <iframe [src]="src" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  
+  
+  <div *ngIf="!playvideo" class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center align-items-center button-container">
+        <a class="button" (click)="togglePlay()">SEND THE {{jetKey == 'heli' ? 'HELIS!' : 'JETS!'}}</a>
+      </div>
+    </div>
+  </div>
